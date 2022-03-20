@@ -1,0 +1,27 @@
+@import "main";
+.quiz {
+  margin: 8px;
+  padding-left: 20px;
+  .question {
+    font-weight: $boldText;
+  }
+  .answers {
+    margin-bottom: 20px;
+  }
+  .answers label {
+    display: block;
+  }
+  .send {
+    font-family: $fontText;
+    border-radius: 8px;
+    border: none;
+    background-color: $mg;
+    color: $black;
+    font-weight: $boldText;
+    padding: 6px;
+  }
+  .send:hover {
+    background-color: #59086d;
+    color: $white;
+  }
+}

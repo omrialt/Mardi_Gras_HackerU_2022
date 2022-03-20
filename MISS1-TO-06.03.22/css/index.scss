@@ -1,0 +1,139 @@
+@import "main";
+.gridbox :nth-child(n + 6) {
+  font-weight: $boldText;
+}
+/*sponsors*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.column {
+  column-width: 100vw;
+  column-gap: 12px;
+  display: flex;
+}
+.column {
+  figure {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: $aaMarg;
+    padding: $highPadd;
+    padding-bottom: 20px;
+    transition: opacity ease-in-out 0.6s;
+    width: 100vw;
+
+    img {
+      padding-bottom: 12px;
+      margin-bottom: 4px;
+      width: $stanDim;
+      height: $stanDim;
+    }
+    figcaption {
+      font-size: 0.8rem;
+      color: $black;
+      text-decoration: none;
+      width: 300px;
+      h6 {
+        font-size: 14px;
+        font-weight: $boldText;
+      }
+    }
+  }
+  a {
+    font-size: 14px;
+    color: $black;
+    text-decoration: none;
+    transition: 0.6;
+    font-family: $fontHead;
+    font-weight: $boldText;
+    cursor: pointer;
+  }
+  a:hover {
+    color: $hoverCol;
+    text-decoration: underline;
+  }
+}
+figcaption {
+  justify-content: center;
+  transition: height $defaultAnimation, background-color $defaultAnimation;
+  width: $stanDim;
+  height: 16px;
+  font-size: 12px;
+  background-color: $white;
+  font-family: $fontText;
+  overflow: hidden;
+}
+figcaption:hover {
+  height: $stanDim;
+  background-image: $backColSponsors;
+  overflow: hidden;
+}
+div.center:hover figure:not(:hover) {
+  opacity: 0.6;
+}
+
+/*sponsors*/
+.testim-container {
+  display: flex;
+  .testimonial {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    background: $backColTestim;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 4px;
+    width: 33.33vw;
+    display: flex;
+    .inner-flex {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-family: $fontHead;
+        font-size: 18px;
+        font-weight: $boldText;
+      }
+      p {
+        font-size: 16px;
+        font-family: $fontText;
+        font-weight: $boldText;
+        margin: 4px;
+      }
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.testimonial::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*responsive*/
+@media only screen and (max-width: 768px) {
+  .column {
+    width: 100vw;
+    flex-direction: column;
+    figure {
+      width: 100vw;
+    }
+  }
+  .testim-container {
+    flex-direction: column;
+    .testimonial {
+      text-align: center;
+      width: 99vw;
+      img {
+        margin: auto;
+        float: none;
+        display: block;
+      }
+    }
+  }
+}

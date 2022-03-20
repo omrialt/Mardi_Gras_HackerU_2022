@@ -1,0 +1,50 @@
+@import "main";
+.contact-flexbox {
+  border-top: $defBorder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  svg {
+    height: 30vh;
+    width: 30vw;
+    color: $mg;
+  }
+  .gridbox {
+    display: inherit;
+    flex-direction: column;
+
+    label {
+      font-family: $fontText;
+      color: $mg;
+      font-weight: $boldText;
+    }
+    input,
+    textarea {
+      margin-bottom: 6px;
+      color: $mg;
+      font-weight: $boldText;
+      padding-left: 4px;
+    }
+    .butt {
+      font-family: $fontText;
+      border-radius: 8px;
+      border: none;
+      background-color: $mg;
+      color: $black;
+      font-weight: $boldText;
+      padding: 6px;
+    }
+  }
+  .butt:hover {
+    background-color: #59086d;
+    color: $white;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-flexbox {
+    svg {
+      display: none;
+    }
+  }
+}

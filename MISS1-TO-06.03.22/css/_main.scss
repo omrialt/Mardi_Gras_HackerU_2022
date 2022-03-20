@@ -1,0 +1,158 @@
+/*fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=IBM+Plex+Sans+Thai+Looped&family=Itim&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400;1,500&display=swap");
+$fontHead: "Henny Penny", cursive;
+$fontText: "Roboto", sans-serif;
+/*colors*/
+$mg: #9453a6;
+$gr: #8cbf3f;
+$yel: #f2cc0f;
+$white: #f2f2f2;
+$hoverCol: $white;
+$black: #0d0d0d;
+$backColNav: linear-gradient(to top left, $gr, $mg);
+$backColSponsors: linear-gradient(to bottom, $mg, $yel, $gr);
+$backColTestim: linear-gradient(to top right, $black, $white);
+/*sizes*/
+$logoWidthHeight: 60px;
+$aaMarg: 8px;
+$highPadd: 0, 20px;
+$center: center;
+$defBorder: 1px solid $black;
+$stanDim: 300px;
+$psize: 16px;
+$h2size: 36px;
+$cricroImg: 250px;
+$boldText: bold;
+/*others*/
+$defaultAnimation: ease-in-out 2s;
+/*items in all site*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  position: relative;
+}
+p {
+  font-family: $fontText;
+}
+nav {
+  background: $backColNav;
+  font-family: $fontHead;
+  font-weight: bold;
+  font-size: 1.2rem;
+  img {
+    height: $logoWidthHeight;
+    width: $logoWidthHeight;
+  }
+  .nav-links,
+  .navbar-brand {
+    color: $black;
+    margin: $aaMarg;
+    text-decoration: none;
+    padding-left: 50px;
+  }
+  .nav-links:hover {
+    color: $hoverCol;
+    text-decoration: underline;
+  }
+  .foract {
+    color: $yel;
+  }
+}
+.fot {
+  background-color: $black;
+  position: absolute;
+  bottom: -5;
+  width: 100vw;
+
+  footer {
+    span {
+      font-weight: $boldText;
+      text-decoration: none;
+      color: $yel;
+    }
+    svg:hover {
+      color: $hoverCol;
+      transform: scale(1.2);
+    }
+  }
+}
+.clr {
+  clear: both;
+}
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+h2 {
+  text-align: center;
+  font-family: $fontHead;
+  color: $black;
+  font-size: $h2size;
+}
+.flexbox {
+  justify-content: space-around;
+  text-align: $center;
+  align-items: $center;
+  display: flex;
+  color: $black;
+  padding: 20px, 20px, 0, 20px;
+  img {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .gridbox {
+    display: grid;
+    font-family: $fontText;
+    p {
+      text-align: left;
+      padding: $highPadd;
+      font-size: $psize;
+    }
+  }
+}
+section {
+  position: relative;
+  img {
+    width: 100vw;
+    height: 65vh;
+  }
+  .forpos {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    color: $gr;
+    text-align: center;
+    h2 {
+      font-family: $fontHead;
+      font-weight: $boldText;
+      color: $gr;
+    }
+    p {
+      font-size: $psize;
+    }
+  }
+}
+/*responsive*/
+@media only screen and (max-width: 768px) {
+  .flexbox {
+    flex-direction: column;
+    p {
+      padding-top: 8px;
+      padding-left: 10px;
+    }
+  }
+  section {
+    .forpos {
+      transform: translateX(-30%);
+    }
+  }
+}
+/* End of items in all site*/
